@@ -110,8 +110,8 @@
 # Font configuration
 font:
     offset:
-      x: 3    # For letter spacing.
-      y: 3    # For line spacing.  Normal (roman) font face
+      x: 0    # For letter spacing.
+      y: 0    # For line spacing.  Normal (roman) font face
   #normal:
     # Font family
     #
@@ -439,7 +439,12 @@ font:
 #  program: /bin/bash
 #  args:
 #    - --login
-
+shell:
+  program: /bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
